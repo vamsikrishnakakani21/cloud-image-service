@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: image-upload-service
+
+  profiles:
+    active: local
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 7070
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+  api-docs:
+    path: /api-docs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+          - metrics
+          - beans
+          - env
+          - conditions
+          - mappings
+  info:
+    env:
+      enabled: true
+
+info:
+  application:
+    name: Image Upload Service
+    description: Testing Image Upload Service in AWS
+    version: 1.0.0

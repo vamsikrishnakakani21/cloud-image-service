@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/commerce_db?currentSchema=content_schema}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:admin123}
+
+file:
+  upload-dir: uploads
